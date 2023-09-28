@@ -1,0 +1,167 @@
+<!doctype html>
+{%load static%}
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title> Online Patient Booking System </title>
+    <link rel="shortcut icon" href="{%static 'assets/images/fav.jpg' %} ">
+    <link rel="stylesheet" href="{%static 'assets/css/bootstrap.min.css'%} ">
+    <link rel="stylesheet" href="{%static 'assets/css/fontawsom-all.min.css' %}">
+    <link rel="stylesheet" href="{%static 'assets/plugins/slider/css/owl.carousel.min.css'%} ">
+    <link rel="stylesheet" href="{%static 'assets/plugins/slider/css/owl.theme.default.css'%} ">
+    <link rel="stylesheet" type="text/css" href="{%static 'assets/css/style.css'%} " />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+        crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="split.css">
+</head>
+
+<body>
+    <header>
+        <div class="header-top">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-7 col-md-12 left-item">
+                        <ul>
+                            <li><i class="fas fa-envelope-square"></i> online@booking.com</li>
+                            <li><i class="fas fa-phone-square"></i> +123 987 887 765</li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-5 d-none d-lg-block right-item">
+                        <ul>
+                            <li><a><i class="fab fa-github"></i></a></li>
+                            <li><a><i class="fab fa-google-plus-g"></i></a></li>
+                            <li> <a><i class="fab fa-pinterest-p"></i></a></li>
+                            <li><a><i class="fab fa-twitter"></i></a></li>
+                            <li> <a><i class="fab fa-facebook-f"></i></a></li>
+
+                        </ul>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+<!-- Appointment -->
+
+        
+            <div  class="container">
+                <div class="row mt-5"></div>
+                <h3 style="color: blue;">View-Appointment</h3>
+                <div>
+                    <div class="centered">
+                    <table class="table table-hover">
+                        <tr>
+                            <th>Doctor_Name</th>
+                            <th>Patient</th>
+                            <th>Appointment_Date</th>
+                            <th>Reason</th>
+                            <th>Created_Date</th>
+
+                        </tr>
+                        {% for a in appointment%}
+                        <tr>
+                            <td>{{a.doctor}}</td>
+                            <td>{{a.patient}}</td>
+                            <td>{{a.appointment_date}}</td>
+                            <td>{{a.appointment_reason}}</td>
+                            <td>{{a.created_at}}</td>
+                            <td>
+
+                            </td>
+                        </tr>
+                        {% endfor %}
+                    </table>
+                </div>
+                </div>
+            </div>
+            <!-- Doctor Leave -->
+      
+            </div>
+            </div>
+            </div>
+
+       
+
+
+        <!-- ################# With Medical Starts Here#######################--->
+
+
+        <!-- ################# Footer Starts Here#######################--->
+
+
+        <footer class="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4 col-sm-12">
+                        <h2>About Us</h2>
+                        <p>
+                            Smart Clinic is a leading provider of information technology, consulting, and business
+                            process
+                            services. Our dedicated employees offer strategic insights, technological expertise and
+                            industry
+                            experience.
+                        </p>
+                        <p>We focus on technologies that promise to reduce costs, streamline processes and speed
+                            time-to-market, Backed by our strong quality processes and rich experience managing
+                            global...
+                        </p>
+                    </div>
+                    <div class="col-md-4 col-sm-12">
+                        <h2>Useful Links</h2>
+                        <ul class="list-unstyled link-list">
+                            <li><a ui-sref="about" href="#/about">About us</a><i class="fa fa-angle-right"></i></li>
+                            <li><a ui-sref="portfolio" href="#/portfolio">Portfolio</a><i class="fa fa-angle-right"></i>
+                            </li>
+                            <li><a ui-sref="products" href="#/products">Latest jobs</a><i class="fa fa-angle-right"></i>
+                            </li>
+                            <li><a ui-sref="gallery" href="#/gallery">Gallery</a><i class="fa fa-angle-right"></i></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-4 col-sm-12 map-img">
+                        <h2>Contact Us</h2>
+                        <address class="md-margin-bottom-40">
+                            BlueDart <br>
+                            Kochi (K.K District) <br>
+                            Kerala, IND <br>
+                            Phone: +91 9159669599 <br>
+                            Email: <a href="mailto:info@anybiz.com" class="">info@bluedart.in</a><br>
+                            Web: <a href="smart-eye.html" class="">www.bluedart.in</a>
+                        </address>
+
+                    </div>
+                </div>
+            </div>
+
+
+        </footer>
+        <div class="copy">
+            <div class="container">
+                <a href="https://www.smarteyeapps.com/">2015 &copy; All Rights Reserved | Designed and Developed by
+                    Smarteyeapps</a>
+
+                <span>
+                    <a><i class="fab fa-github"></i></a>
+                    <a><i class="fab fa-google-plus-g"></i></a>
+                    <a><i class="fab fa-pinterest-p"></i></a>
+                    <a><i class="fab fa-twitter"></i></a>
+                    <a><i class="fab fa-facebook-f"></i></a>
+                </span>
+            </div>
+
+        </div>
+
+</body>
+
+<script src="{%static 'js/jquery-3.2.1.min.js' %} "></script>
+<script src="{%static 'js/popper.min.js' %} "></script>
+<script src="{%static 'js/bootstrap.min.js' %} "></script>
+<script src="{%static 'assets/plugins/scroll-fixed/jquery-scrolltofixed-min.js' %} "></script>
+<script src="{%static 'assets/plugins/slider/js/owl.carousel.min.js' %} "></script>
+<script src="{%static 'js/script.js' %} "></script>
+</body>
+
+</html>

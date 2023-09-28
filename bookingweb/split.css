@@ -1,0 +1,12 @@
+/* Split the screen in half */
+div
+{
+height: 450px; 
+background-color: rgb(118, 174, 174);
+width: 23%;
+float: left;
+border: 2px rgb(117, 79, 86) solid;
+padding: 3px;
+color: rgb(59, 8, 20);
+
+}
